@@ -1,0 +1,13 @@
+<resources>
+    <!--> Aqui eu configuro o texto do titulo do app </!-->
+    <string name="app_name">Sakura Restaurante</string>
+
+    <!--> Aqui eu coloco um texto "Sakura" para o meu textview de nome do restaurante</!-->
+    <string name="title_restaurant">Sakura</string>
+
+    <!--> Aqui eu configuro o texto do botão de fazer pedido</!-->
+    <string name="botao_fazer_pedido">Faça seu pedido!</string>
+
+    <!--> Aqui eu configuro o texto do botão de horas trabalhadas</!-->
+    <string name="botao_consultar_horas">Consultar horas trabalhadas</string>
+</resources>
