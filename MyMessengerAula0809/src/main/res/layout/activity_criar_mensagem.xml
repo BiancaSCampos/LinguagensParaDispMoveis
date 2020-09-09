@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Aqui colocamos a cnfiguração do LinearLayout. Temos vários tipos de layout possivel
+    que é a forma como os componentes visuais serão organizados na tela
+    No nosso caso aqui estamos dizendo que a largura e altura corresponderão a area total disponivel
+    no dispositivo (layout_width e layout_height), que teremos um espaçamento entre o conteúdo, os
+    elementos dentro do layout e a borda da tela (padding) e que os elementos serão inseridos
+    em sequencia verticalmente (orientation). Também incluímos o contexto, qual a atividade que o
+    nosso layout estará ligado.
+    -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.uniso.lpdm.meumensageiro.CriarMensagemActivity">
+
+    <!--Aqui configuramos um componente onde o usuário poderá inserir um texto, que usaremos para
+        enviar para outra atividade. Adicionamos um id e configuramos a altura e largura para
+        serem porporcionais ao tamanho do conteúdo que esperamos dentro dele. Criamos uma margem
+        entre o elemento e o layout externo, no topo (layout_marginTop). Adicionamos uma dica de texto
+        para auxiliar o usuário a saber o que ele deve inserir no campo (hint). Precisamos para isso
+        utilizar um recurso de string. Definimos que o tamanho do comoponente será de 10 letras M (ems).
+        O tamanho da letra M é usada como referencia para tamanhos de fontes-->
+    <EditText
+        android:id="@+id/txtMensagemEnviada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/hint"
+        android:ems="10"
+        />
+
+    <!--Aqui criamos um botão que no evento de ser clicado, irá disparar uma ação da atividade. Essa
+        ação que irá chamar e se comunicar com a outra atividade, que será responsável por receber
+        a mensagem. Configuramos a largura e altura como nos elementos anteriores, assim como o id e
+        a margem superior. Configuramos o evento onClick para chamar o método/função onSendMessage da
+        atividade. O texto que será exibido no botão é configurado na propriedade text e pode ser
+        um texto fixo, mas aqui utilizamos um recurso de string também
+        -->
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onEnviarMensagemSegundaVersao"
+        android:text="@string/enviar" />
+
+
+</LinearLayout>

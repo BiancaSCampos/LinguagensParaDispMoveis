@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--O arquivo de manifesto contém informações essenciais sobre o app, como suas atividades,
+bibliotecas entre outras informações. Declaramos aqui o nome do pacote com a propriedade
+package. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uniso.lpdm.meumensageiro">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--Todas as atividades que são utilizadas pela aplicação declaradas aqui-->
+        <activity android:name="com.uniso.lpdm.meumensageiro.ReceberMensagemActivity">
+            <!--Se quisermos que nossas atividades possam ser chamadas por atividades fora de
+            nossa aplicação, precisamos configurar o intent filter. O android usa essas
+            configurações para filtrar que aplicações irão aparecer para o usuário quando
+            uma intenção implicita é usada. Além de informar as ações que a atividade irá surpotar
+             informamos também os tipos de dados (texto, imagem, etc). Somos obrigados a setar a
+             categoria defult também, porque do contrário o android ignora esse intent filter e
+             a nossa atividade não aparece listada para o usuário-->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.uniso.lpdm.meumensageiro.CriarMensagemActivity">
+            <intent-filter>
+                <!--Essa configuração informa que essa é a atividade principal-->
+                <action android:name="android.intent.action.MAIN" />
+                <!--Essa configuração informa que essa é a atividade que pode ser usada para
+                    inicializar a aplicação-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Meu Mensageiro</string>
+    <!-- Os dois recursos de texto utilizados no layout de criação da mensagem    -->
+    <string name="enviar">Enviar</string>
+    <string name="hint">Coloque aqui a mensagem a ser enviada</string>
+</resources>
